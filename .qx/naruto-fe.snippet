@@ -1,0 +1,9 @@
+#!name=naruto-fe 會員解鎖
+#!desc=naruto-fe 火影忍者社區微信小程式 VIP 解鎖
+#!author=minis-auto
+
+[rewrite_local]
+^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction url script-response-body naruto-fe-vip.js
+
+[mitm]
+hostname = env-00jxgsbzdqch.api-hz.cloudbasefunction.cn
