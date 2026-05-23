@@ -1,45 +1,56 @@
-// naruto-fe 會員解鎖腳本
-// 自動生成於 2026-05-23
-// 後端: env-00jxgsbzdqch.api-hz.cloudbasefunction.cn
+/*************************************
 
-const url = $request.url;
-if (!url.includes('api-hz.cloudbasefunction.cn/functions/invokeFunction')) {
+项目名称：naruto-fe 火影忍者社区 解锁VIP
+脚本作者：minis-auto
+更新日期：2026-05-23
+后　 端：腾讯云 uniCloud
+使用声明：⚠️仅供参考，🈲转载与售卖！
+使用说明：如果脚本无效，请先排除是否脚本冲突
+
+[rewrite_local]
+^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction url script-response-body https://cdn.jsdelivr.net/gh/r666bc/minis-qx@main/scripts/naruto-fe-vip.js
+
+[mitm]
+hostname = env-00jxgsbzdqch.api-hz.cloudbasefunction.cn
+
+*************************************/
+
+var url = $request.url;
+if (url.indexOf('api-hz.cloudbasefunction.cn') == -1) {
     $done({});
     return;
 }
 
 try {
-    const body = JSON.parse($request.body);
-    const cmd = body.command || {};
-    const dbCmds = cmd.$db || [];
+    var body = JSON.parse($request.body);
+    var cmd = body.command || {};
+    var dbCmds = cmd.$db || [];
     
-    let collection = '';
-    for (const c of dbCmds) {
-        if (c.$method === 'collection') {
-            collection = c.$param[0];
+    var collection = '';
+    for (var i = 0; i < dbCmds.length; i++) {
+        if (dbCmds[i].$method === 'collection') {
+            collection = dbCmds[i].$param[0];
             break;
         }
     }
     
-    if (collection === 'uni-id-users') {
-        let resp = JSON.parse($response.body);
-        if (resp.data && resp.data.length > 0) {
-            const user = resp.data[0];
-            user.vip = 1;
-            // vip: 0→非會員, 1→會員, 或其他值
-            // 如果還需要其他欄位:
-            // user.vip_level = 1;
-            // user.vip_expire = 4102444800000; // 2100年
-            if (!user.hadtitle) user.hadtitle = [];
-            if (!user.hadtitle.includes('vip_member')) {
-                user.hadtitle.push('vip_member');
-            }
-            $done({body: JSON.stringify(resp)});
-            return;
-        }
+    if (collection !== 'uni-id-users') {
+        $done({});
+        return;
     }
     
-    $done({});
+    var resp = JSON.parse($response.body);
+    if (resp.data && resp.data.length > 0) {
+        var user = resp.data[0];
+        user.vip = 1;
+        if (!user.hadtitle) user.hadtitle = [];
+        if (user.hadtitle.indexOf('vip_member') == -1) {
+            user.hadtitle.push('vip_member');
+        }
+        $done({body: JSON.stringify(resp)});
+    } else {
+        $done({});
+    }
 } catch (e) {
     $done({});
 }
