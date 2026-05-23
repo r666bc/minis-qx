@@ -20,7 +20,7 @@
 #### Quantumult X
 ```
 [rewrite_local]
-^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction url script-response-body https://raw.githubusercontent.com/r666bc/minis-qx/main/scripts/naruto-fe-vip.js
+^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction url script-response-body https://cdn.jsdelivr.net/gh/r666bc/minis-qx@main/scripts/naruto-fe-vip.js
 
 [mitm]
 hostname = env-00jxgsbzdqch.api-hz.cloudbasefunction.cn
@@ -31,7 +31,7 @@ hostname = env-00jxgsbzdqch.api-hz.cloudbasefunction.cn
 #### Surge
 ```
 [Script]
-naruto-fe-vip = type=http-response, pattern=^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction, script-path=https://raw.githubusercontent.com/r666bc/minis-qx/main/scripts/naruto-fe-vip.js, requires-body=true
+naruto-fe-vip = type=http-response, pattern=^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction, script-path=https://cdn.jsdelivr.net/gh/r666bc/minis-qx@main/scripts/naruto-fe-vip.js, requires-body=true
 
 [MITM]
 hostname = env-00jxgsbzdqch.api-hz.cloudbasefunction.cn
@@ -40,7 +40,7 @@ hostname = env-00jxgsbzdqch.api-hz.cloudbasefunction.cn
 #### Loon
 ```
 [Script]
-http-response ^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction script-path=https://raw.githubusercontent.com/r666bc/minis-qx/main/scripts/naruto-fe-vip.js
+http-response ^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction script-path=https://cdn.jsdelivr.net/gh/r666bc/minis-qx@main/scripts/naruto-fe-vip.js
 
 [MITM]
 hostname = env-00jxgsbzdqch.api-hz.cloudbasefunction.cn

@@ -3,7 +3,7 @@
 #!author=minis-auto
 
 [Script]
-http-response ^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction script-path=https://raw.githubusercontent.com/r666bc/minis-qx/main/scripts/naruto-fe-vip.js
+http-response ^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction script-path=https://cdn.jsdelivr.net/gh/r666bc/minis-qx@main/scripts/naruto-fe-vip.js
 
 [MITM]
 hostname = env-00jxgsbzdqch.api-hz.cloudbasefunction.cn

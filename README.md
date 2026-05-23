@@ -37,5 +37,5 @@ docs/                   → 使用說明
 ## 原始 raw URL
 
 ```
-https://raw.githubusercontent.com/r666bc/minis-qx/main/scripts/naruto-fe-vip.js
+https://cdn.jsdelivr.net/gh/r666bc/minis-qx@main/scripts/naruto-fe-vip.js
 ```
