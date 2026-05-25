@@ -1,12 +1,3 @@
-/*
-Tachimanga Premium 破解
-[rewrite_local]
-^https:\/\/api3\.tachimanga\.app\/api\/info\/fetch url script-response-body https://cdn.jsdelivr.net/gh/r666bc/minis-qx@main/scripts/tachimanga_premium.js
-
-[mitm]
-hostname = api3.tachimanga.app, *.tachimanga.app
-*/
-
 const url = $request.url;
 const method = $request.method;
 
