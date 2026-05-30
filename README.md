@@ -10,20 +10,29 @@ Minis 自動分析 HAR 後生成的代理工具改寫腳本與規則。
 
 ### 🔓 會員解鎖 / VIP Unlock
 
-| App | 功能 | JS 腳本 | QX | Surge | Loon | Shadowrocket |
-|-----|------|---------|----|-------|------|-------------|
-| 火影忍者社區 | VIP 解鎖 | [JS](Scripts/JS/naruto-fe-vip.js) | [conf](Scripts/QX/naruto-fe.conf) | [sgmodule](Scripts/Surge/naruto-fe.sgmodule) | [plugin](Scripts/Loon/naruto-fe.plugin) | [module](Scripts/Shadowrocket/naruto-fe.module) |
-| Tachimanga | Premium 破解 | [JS](Scripts/JS/tachimanga_premium.js) | [conf](Scripts/QX/tachimanga.conf) | [sgmodule](Scripts/Surge/tachimanga.sgmodule) | [plugin](Scripts/Loon/tachimanga.plugin) | [module](Scripts/Shadowrocket/tachimanga.module) |
+| App | 功能 | JS 腳本 | QX conf | Surge sgmodule | Loon plugin | Shadowrocket module |
+|-----|------|---------|---------|----------------|-------------|-------------------|
+| 火影忍者社區 | VIP 解鎖 | [JS](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/JS/naruto-fe-vip.js) | [conf](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/QX/naruto-fe.conf) | [sgmodule](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/Surge/naruto-fe.sgmodule) | [plugin](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/Loon/naruto-fe.plugin) | [module](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/Shadowrocket/naruto-fe.module) |
+| Tachimanga | Premium 破解 | [JS](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/JS/tachimanga_premium.js) | [conf](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/QX/tachimanga.conf) | [sgmodule](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/Surge/tachimanga.sgmodule) | [plugin](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/Loon/tachimanga.plugin) | [module](https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/Shadowrocket/tachimanga.module) |
 
 ### 🚫 去廣告 / Ad Block
+
+| App | 功能 | JS 腳本 | QX conf | Surge sgmodule | Loon plugin | Shadowrocket module |
+|-----|------|---------|---------|----------------|-------------|-------------------|
 
 *(尚無腳本 — 等待 HAR 分析後自動生成)*
 
 ### 🔧 功能增強 / Enhancement
 
+| App | 功能 | JS 腳本 | QX conf | Surge sgmodule | Loon plugin | Shadowrocket module |
+|-----|------|---------|---------|----------------|-------------|-------------------|
+
 *(尚無腳本 — 等待 HAR 分析後自動生成)*
 
 ### 📊 規則 / Rules
+
+| 規則名稱 | 類型 | 說明 | QX | Surge | Loon | Shadowrocket |
+|----------|------|------|----|-------|------|-------------|
 
 *(尚無規則 — 等待 HAR 分析後自動生成)*
 
