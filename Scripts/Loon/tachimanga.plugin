@@ -1,0 +1,10 @@
+#!name = Tachimanga Premium (Loon)
+#!desc = 破解 Tachimanga Premium 會員
+#!author = Minis
+#!homepage = https://github.com/r666bc/minis-qx
+
+[Script]
+http-response ^https:\/\/api3\.tachimanga\.app\/api\/info\/fetch script-path=https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/JS/tachimanga_premium.js, requires-body=true, tag=Tachimanga Premium
+
+[MITM]
+hostname = api3.tachimanga.app

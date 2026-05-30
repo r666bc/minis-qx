@@ -1,9 +1,0 @@
-#!name=naruto-fe 會員解鎖 (Surge)
-#!desc=naruto-fe 火影忍者社區微信小程式 VIP 解鎖
-#!author=minis-auto
-
-[Script]
-naruto-fe-vip = type=http-response, pattern=^https?://env-00jxgsbzdqch\.api-hz\.cloudbasefunction\.cn/functions/invokeFunction, script-path=https://raw.githubusercontent.com/r666bc/minis-qx/main/scripts/naruto-fe-vip.js, requires-body=true
-
-[MITM]
-hostname = env-00jxgsbzdqch.api-hz.cloudbasefunction.cn
