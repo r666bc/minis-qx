@@ -4,17 +4,15 @@ Minis 自動分析 HAR 後生成的改寫腳本與規則。
 
 支援工具：Quantumult X · Surge · Loon
 
-## 目錄
+## 腳本規範
 
-```
-scripts/                → .js 改寫腳本（raw URL 直接訂閱）
-rules/                  → 去廣告/改寫規則
-.qx/                    → QX 專用配置（snippet/conf）
-.surge/                 → Surge 配置（sgmodule）
-.loon/                  → Loon 配置（plugin）
-reports/                → HAR 分析報告
-docs/                   → 使用說明
-```
+倉庫內所有檔案遵循以下規範：
+
+- **`scripts/*.js`** — 純 JS 代碼，不含 `[rewrite_local]` / `[mitm]` 等註釋，可直接 raw URL 訂閱
+- **`.qx/*.snippet`** — QX 專用 snippet，內含 `[rewrite_local]` + `[mitm]`
+- **`.surge/*.sgmodule`** — Surge 模組
+- **`.loon/*.plugin`** — Loon 插件
+- **所有 JS 引用 URL 使用 `raw.githubusercontent.com`** — QX 只認 raw CDN，不用 jsDelivr
 
 ## 腳本清單
 
@@ -30,39 +28,43 @@ docs/                   → 使用說明
 - [naruto-fe.snippet](.qx/naruto-fe.snippet)
 - [tachimanga_premium.snippet](.qx/tachimanga_premium.snippet)
 （QX → 設定 → 下載 → 從 URL 下載配置）
-或手動加入 rewrite + mitm 規則。
 
-### Surge
-導入 sgmodule：
-- [naruto-fe.sgmodule](.surge/naruto-fe.sgmodule)
-- [tachimanga_premium.sgmodule](.surge/tachimanga_premium.sgmodule)
-（Surge → 模組 → 安裝新模組）
+## raw URL 一覽
 
-### Loon
-導入 plugin：
-- [naruto-fe.plugin](.loon/naruto-fe.plugin)
-- [tachimanga_premium.plugin](.loon/tachimanga_premium.plugin)
-（Loon → 插件 → 從 URL 安裝）
-
-## 原始 raw URL
-
-### JavaScript 腳本（直接訂閱用）
+### JavaScript 腳本
 ```
-https://cdn.jsdelivr.net/gh/r666bc/minis-qx@main/scripts/naruto-fe-vip.js
-https://cdn.jsdelivr.net/gh/r666bc/minis-qx@main/scripts/tachimanga_premium.js
+https://raw.githubusercontent.com/r666bc/minis-qx/main/scripts/naruto-fe-vip.js
+https://raw.githubusercontent.com/r666bc/minis-qx/main/scripts/tachimanga_premium.js
 ```
 
 ### QX Snippet
 ```
+https://raw.githubusercontent.com/r666bc/minis-qx/main/.qx/naruto-fe.snippet
 https://raw.githubusercontent.com/r666bc/minis-qx/main/.qx/tachimanga_premium.snippet
 ```
 
 ### Surge 模組
 ```
+https://raw.githubusercontent.com/r666bc/minis-qx/main/.surge/naruto-fe.sgmodule
 https://raw.githubusercontent.com/r666bc/minis-qx/main/.surge/tachimanga_premium.sgmodule
 ```
 
 ### Loon 插件
 ```
+https://raw.githubusercontent.com/r666bc/minis-qx/main/.loon/naruto-fe.plugin
 https://raw.githubusercontent.com/r666bc/minis-qx/main/.loon/tachimanga_premium.plugin
 ```
+
+## 目錄結構
+
+```
+scripts/                → .js 改寫腳本（純 JS，raw URL 直接訂閱）
+.qx/                    → QX snippet（引用 raw.githubusercontent.com）
+.surge/                 → Surge sgmodule
+.loon/                  → Loon plugin
+reports/                → HAR 分析報告
+docs/                   → 使用說明
+```
+
+> ⚠️ 注意：snippet/sgmodule/plugin 中引用的 JS URL 全部使用 `raw.githubusercontent.com`。  
+> QX 只認 raw CDN，使用 jsDelivr 會導致腳本加載失敗。
