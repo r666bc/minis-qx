@@ -29,6 +29,12 @@ Minis 自動分析 HAR 後生成的代理工具改寫腳本與規則。
 
 *(尚無腳本 — 等待 HAR 分析後自動生成)*
 
+### 📅 定時任務 / Cron Tasks
+
+| App | 功能 | JS 腳本 | QX snippet | Surge sgmodule |
+|-----|------|---------|-----------|----------------|
+| 美圖欣賞 | 定時推送美圖 | [JS](https://raw.githubusercontent.com/r666bc/minis-qx/main/Tasks/meitu/meitu.js) | [snippet](https://raw.githubusercontent.com/r666bc/minis-qx/main/Tasks/meitu/meitu.snippet) | [sgmodule](https://raw.githubusercontent.com/r666bc/minis-qx/main/Tasks/meitu/meitu.sgmodule) |
+
 ### 📊 規則 / Rules
 
 | 規則名稱 | 類型 | 說明 | QX | Surge | Loon | Shadowrocket |
@@ -68,6 +74,19 @@ Shadowrocket → 配置 → 模塊 → 添加模塊
 - https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/Shadowrocket/naruto-fe.module
 - https://raw.githubusercontent.com/r666bc/minis-qx/main/Scripts/Shadowrocket/tachimanga.module
 
+### 📅 定時任務（導入 snippet）
+
+```
+QX → 設定 → 下載 → 從 URL 下載配置
+```
+- https://raw.githubusercontent.com/r666bc/minis-qx/main/Tasks/meitu/meitu.snippet
+
+Surge 用戶導入 sgmodule：
+```
+Surge → 模組 → 安裝新模組
+```
+- https://raw.githubusercontent.com/r666bc/minis-qx/main/Tasks/meitu/meitu.sgmodule
+
 ---
 
 ## 📁 目錄結構
@@ -80,6 +99,7 @@ minis-qx/
 │   ├── Surge/           → Surge 模組（.sgmodule）
 │   ├── Loon/            → Loon 插件（.plugin）
 │   └── Shadowrocket/    → Shadowrocket 模組（.module）
+├── Tasks/               → 定時任務腳本（.js + .snippet + .sgmodule）
 └── Rules/               → 分流/去廣告規則（.list / .conf）
 ```
 
