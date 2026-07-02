@@ -1,0 +1,109 @@
+{
+  "id": "r666bc.minis-qx",
+  "name": "Minis QX 腳本訂閱",
+  "author": "@r666bc",
+  "icon": "https://avatars.githubusercontent.com/u/50571734?s=460&v=4",
+  "repo": "https://github.com/r666bc/minis-qx",
+  "apps": [
+    {
+      "id": "r666bc.meitu",
+      "name": "美圖鑒賞",
+      "descs_html": [
+        "<p style='color:#3498db;text-align:center;'>選擇圖源類型和分類</p>"
+      ],
+      "keys": [
+        "meitu_type"
+      ],
+      "settings": [
+        {
+          "id": "meitu_type",
+          "name": "圖源選擇",
+          "val": "1024 - 唯美寫真",
+          "type": "radios",
+          "desc": "選擇圖源和分類",
+          "items": [
+            {
+              "key": "4KHD - popular",
+              "label": "4KHD - popular"
+            },
+            {
+              "key": "4KHD - cosplay",
+              "label": "4KHD - cosplay"
+            },
+            {
+              "key": "4KHD - album",
+              "label": "4KHD - album"
+            },
+            {
+              "key": "115ZY - 街拍偷拍",
+              "label": "115ZY - 街拍偷拍"
+            },
+            {
+              "key": "115ZY - 丝袜美腿",
+              "label": "115ZY - 丝袜美腿"
+            },
+            {
+              "key": "115ZY - 欧美风情",
+              "label": "115ZY - 欧美风情"
+            },
+            {
+              "key": "115ZY - 卡通漫画",
+              "label": "115ZY - 卡通漫画"
+            },
+            {
+              "key": "115ZY - 网友自拍",
+              "label": "115ZY - 网友自拍"
+            },
+            {
+              "key": "115ZY - 露出激情",
+              "label": "115ZY - 露出激情"
+            },
+            {
+              "key": "115ZY - 唯美写真",
+              "label": "115ZY - 唯美写真"
+            },
+            {
+              "key": "115ZY - 女优情报",
+              "label": "115ZY - 女优情报"
+            },
+            {
+              "key": "1024 - 唯美写真",
+              "label": "1024 - 唯美写真"
+            },
+            {
+              "key": "1024 - 网友自拍",
+              "label": "1024 - 网友自拍"
+            },
+            {
+              "key": "1024 - 露出激情",
+              "label": "1024 - 露出激情"
+            },
+            {
+              "key": "1024 - 美乳美臀",
+              "label": "1024 - 美乳美臀"
+            },
+            {
+              "key": "1024 - 丝袜美腿",
+              "label": "1024 - 丝袜美腿"
+            },
+            {
+              "key": "1024 - 卡通漫画",
+              "label": "1024 - 卡通漫画"
+            },
+            {
+              "key": "1024 - AI图展",
+              "label": "1024 - AI图展"
+            }
+          ]
+        }
+      ],
+      "author": "@yuheng",
+      "repo": "https://github.com/r666bc/minis-qx",
+      "icons": [
+        "https://raw.githubusercontent.com/r666bc/minis-qx/main/Tasks/meitu/meitu.png",
+        "https://raw.githubusercontent.com/r666bc/minis-qx/main/Tasks/meitu/meitu.png"
+      ],
+      "script": "https://raw.githubusercontent.com/r666bc/minis-qx/main/Tasks/meitu/meitu.js"
+    }
+  ]
+}
